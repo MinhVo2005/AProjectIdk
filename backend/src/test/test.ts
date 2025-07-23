@@ -1,7 +1,9 @@
+
 import { connectDB } from "../lib/db.ts";
 import {sendEmail} from "../lib/utils.ts";
 import User from "../model/user.model.ts";
 import crypto from "crypto"
+import {Types} from "mongoose"
 
 const name:string  = "Test2";
 const email:string = "test2@email.com";
@@ -29,4 +31,10 @@ async function test (){
     console.log(newUser.emailVerificationExpired)
 }
 
-test();
+
+async function test2(){
+    const type = new Types.ObjectId("687c6b35ea0a55bbf8858153")
+    //addRoomToUser(type)
+}
+
+test2()

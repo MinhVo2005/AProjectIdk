@@ -9,7 +9,7 @@ const BASE_URL:string = "http://localhost:5001"
 
 export const useAuthStore = createWithEqualityFn<IUseAuthStore>((set,get) =>({
     //State
-    authUser: null,
+    authUser: undefined,
     isCheckingAuth: false,
     //Verification
     isSigningUp:false,
@@ -28,7 +28,7 @@ export const useAuthStore = createWithEqualityFn<IUseAuthStore>((set,get) =>({
             set({authUser:res.data})
         } catch (error) {
             console.error("Error in CheckAuth", error);
-            set({authUser:null})
+            set({authUser:undefined})
         }finally{
             set({isCheckingAuth:false})
         }
@@ -67,7 +67,7 @@ export const useAuthStore = createWithEqualityFn<IUseAuthStore>((set,get) =>({
         set({isLogout:true})
         try {
             await axiosInstance.post("/auth/logout");
-            set({authUser:null})
+            set({authUser:undefined})
         } catch (error) {
             console.log("Error while logout", error);
             toast.error("Error")

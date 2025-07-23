@@ -1,9 +1,9 @@
-import React, { type ChangeEvent, type ChangeEventHandler } from 'react'
+
 import VerificationWrapper from '../components/Verification';
 import { useState } from 'react';
 import type { IFormData } from '../lib';
 import { useAuthStore } from '../store/authStore';
-import toast from 'react-hot-toast';
+
 
 const Login = () => {
   const [isLoginningIn, login] = useAuthStore(
