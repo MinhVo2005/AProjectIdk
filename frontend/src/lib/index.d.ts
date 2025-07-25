@@ -3,6 +3,7 @@ export interface IUser {
     displayName:string,
     email:string,
     profilePic:string,
+    isUserVerify: boolean,
     rooms: string[],
 }
 

@@ -39,7 +39,7 @@ const VerifyEmail = () => {
   return(  
     
     <div className="min-h-screen flex items-center justify-center p-4">
-      {!authUser || !authUser.isUserVerify ? 
+      { !authUser?.isUserVerify ? 
       <div className=" shadow-lg rounded-xl p-8 max-w-sm text-center">
         <XCircle className="mx-auto h-16 w-16 text-red-500" />
         <h1 className="mt-4 text-2xl font-semibold">

@@ -10,7 +10,7 @@ const VerifyPage = () => {
 
   return (
     <div className='h-screen w-screen flex justify-center items-center bg-base-100'>
-        {!authUser.isUserVerify ?
+        {!authUser?.isUserVerify ?
         <div className='flex flex-col space-y-5 h-4/12 w-4/12 justify-center items-center shadow-lg rounded-2xl  '>
             <p className='text-2xl font-medium'>Please verify your account</p>
             <button 
