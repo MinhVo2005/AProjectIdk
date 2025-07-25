@@ -1,4 +1,4 @@
-import React, { useEffect, type ChangeEvent, type ChangeEventHandler } from 'react'
+
 import VerificationWrapper from '../components/Verification';
 import { useState } from 'react';
 import type { IFormData } from '../lib';

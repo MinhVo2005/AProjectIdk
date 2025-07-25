@@ -125,9 +125,7 @@ export function updateProfile() {
     //TODO: LET USER UPDATE THEIR PROFILE (I.E THEIR DISPLAY NAME AND PROFILE PIC)
 };
 
-export function searchUser(){
-    //TODO: RETURN THE SIMILAR SEARCH USER BACK
-}
+
 
 export async function verifyEmail(req:Request, res: Response):Promise<any>{
     const {token} = req.query;

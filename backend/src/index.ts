@@ -5,6 +5,7 @@ import {config} from "dotenv";
 import { app, server } from "./lib/socket.ts";
 import authRoutes from "./routes/auth.routes.ts"
 import messagesRoutes from "./routes/messages.routes.ts"
+import userRoutes from "./routes/user.routes.ts"
 import cookieParser from 'cookie-parser';
 import cors from "cors"
 
@@ -21,7 +22,8 @@ app.use(cors({
 
 
 app.use("/api/auth", authRoutes);
-app.use("api/messages", messagesRoutes);
+app.use("/api/messages", messagesRoutes);
+app.use("/api/user", userRoutes)
 
 server.listen(PORT, () =>{
     console.log("Server is running on port", PORT);

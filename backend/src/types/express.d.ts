@@ -5,7 +5,7 @@ declare global {
   namespace Express {
     // now req.user will be IUser
     interface Request {
-      user?: IUser;
+      user: IUser;
     }
   }
 }

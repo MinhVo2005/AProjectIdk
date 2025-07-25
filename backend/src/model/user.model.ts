@@ -1,4 +1,4 @@
-import mongoose, {Schema} from "mongoose";
+import mongoose, {Schema, Types} from "mongoose";
 import { IUser } from ".";
 
 const userSchema:Schema = new Schema<IUser> ({
@@ -16,7 +16,24 @@ const userSchema:Schema = new Schema<IUser> ({
     emailVerificationToken: String,
     emailVerificationExpired: Date,
 
+    rooms: [{type: Types.ObjectId, ref: "Room"}]
+
 }, {timestamps: true})
+
+userSchema.set('toJSON', {
+  transform(doc, ret) {
+    delete ret.password;
+    delete ret.__v;
+    return ret;
+  }
+});
+userSchema.set('toObject', {
+  transform(doc, ret) {
+    delete ret.password;
+    delete ret.__v;
+    return ret;
+  }
+});
 
 const User = mongoose.model<IUser>("User", userSchema);
 
