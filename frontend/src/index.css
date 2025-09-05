@@ -1,0 +1,5 @@
+
+@import "tailwindcss";
+@plugin "daisyui" {
+  themes: "retro", "coffee", "garden", "autumn", "sunset", "light", "dark", "lofi", "pastel";
+}
